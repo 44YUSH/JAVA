@@ -14,11 +14,12 @@ public class Q006_PrimeNo {
         int t = sc.nextInt();
 
         for(int i=0; i<t; i++){
+            System.out.print("Enter no "+(i+1)+": ");
             int n = sc.nextInt();
 
             int count = 0;
             for(int div = 2; div * div <= n; div++){
-                if(n % div ==0){
+                if(n % div == 0){
                     count++;
                     break;
                 }
