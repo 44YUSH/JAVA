@@ -6,14 +6,7 @@ public class Q011_ReversePrintDigit {
         System.out.println("Enter the no : ");
         int n = sc.nextInt();
 
-        int dig = 0;
-        int temp1 = n;
-        while(temp1 != 0){
-            temp1 = temp1 / 10;
-            dig++;
-        }
-
-        for(int i=0; i < dig; i++){
+        while(n > 0){
             int rem = n % 10;
             System.out.println(rem);
             n = n / 10;
