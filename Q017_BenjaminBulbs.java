@@ -8,6 +8,7 @@ public class Q017_BenjaminBulbs {
 
         System.out.println("Bulbs that will glow after all toggles are : ");
         for (int i = 1; i*i <= n; i++) {
+            // Just print the perfect square.
             System.out.print(i * i + " ");
         }
     }
