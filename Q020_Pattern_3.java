@@ -1,11 +1,11 @@
 /*
 Pattern 3 : 
 
-        * 
-      * * 
-    * * * 
+* * * * * 
   * * * * 
-* * * * *
+    * * * 
+      * * 
+        *
 
  */
 
@@ -18,13 +18,13 @@ public class Q020_Pattern_3 {
         int n = sc.nextInt();
 
         System.out.println("\nYour pattern : \n");
-        int count=0;
-        for(int i = n-1; i >= 0; i--){
+        int count=n+1;
+        for(int i = 0; i < n; i++){
             for(int j = 1; j <= i; j++){
                 System.out.print("  ");
             }
-            count++;
-            for(int k=1; k <= count; k++){
+            count--;
+            for(int k=count; k >= 1; k--){
                 System.out.print("* ");
             }
             System.out.println();
