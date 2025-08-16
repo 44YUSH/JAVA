@@ -1,5 +1,5 @@
 /*
-Pattern 8 : 
+Pattern 9 : 
 
         *
       *
@@ -10,7 +10,7 @@ Pattern 8 :
  */
 
 import java.util.*;
-public class Q025_Pattern_8 {
+public class Q026_Pattern_9 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -18,11 +18,10 @@ public class Q025_Pattern_8 {
         int n = sc.nextInt();
 
         System.out.println("\nYour pattern : \n");
-        for(int i = n; i >= 1; i--){
-            for(int j = 1; j < i; j++){
-                System.out.print("  ");
-            }
-            System.out.print("*");
+
+        int space = n-2;
+        for(int i = 1; i <= n; i++){
+            
             System.out.println();
         }
     }
