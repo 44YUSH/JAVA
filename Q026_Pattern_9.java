@@ -19,7 +19,6 @@ public class Q026_Pattern_9 {
 
         System.out.println("\nYour pattern : \n");
 
-        int space = n-2;
         for(int i = 1; i <= n; i++){
           for(int j = 1; j <= n; j++){
             if(i == j || i + j == n + 1){
