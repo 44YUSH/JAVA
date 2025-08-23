@@ -2,9 +2,9 @@
 Pattern 15 : 
 
     1 
-  2 3 4 
-3 4 5 6 7 
-  2 3 4 
+  2 3 2 
+3 4 5 4 3 
+  2 3 2 
     1   
 
  */
@@ -29,7 +29,12 @@ public class Q032_NumPattern_15 {
           int temp = count;
           for(int k = 1; k <= star; k++){
             System.out.print(temp+" ");
-            temp++;
+            if(k <= star/2){
+                temp++;
+            }
+            else{
+                temp--;
+            }
           }
           if(i <= n/2){
             space--;
