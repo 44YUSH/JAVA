@@ -19,11 +19,10 @@ public class Q034_NumPattern_17 {
 
         System.out.println("\nYour pattern : \n");
 
-        int space1 = n/2;
+        int space = n/2;
         int star = 1;
-        int space2 = 1;
         for(int i = 1; i <= n; i++){
-            for(int j = 1; j <= space1; j++){
+            for(int j = 1; j <= space; j++){
                 if(i == (n/2)+1){
                     /* SKIP */
                 }
