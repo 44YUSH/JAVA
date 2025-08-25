@@ -10,7 +10,7 @@ Pattern 17 :
  */
 
 import java.util.*;
-public class Q034_NumPattern_17 {
+public class Q034_Pattern_17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
