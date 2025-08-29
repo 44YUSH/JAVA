@@ -1,42 +1,34 @@
 import java.util.*;
 public class Q041_SubtractAnyBase {
-    public static int SubtractAnyBase(int n1, int n2, int base){
-        int result =0;
+    public static int SubtractAnyBase(int n1, int n2, int base) {
+    int result = 0;
+    int power = 0;
+    int borrow = 0;
 
-        int max, min;
-        if(n1 >= n2){
-            max = n1 ; min = n2;
-        }
-        else{
-            max = n2 ; min = n1;
-        }
+    while (n2 > 0 || n1 > 0) {
+        int rem1 = n1 % 10;
+        int rem2 = n2 % 10;
 
-        int power = 100;
-        int dig2 = 0;
-        int count = 0;
-        while(max > 0 || min > 0){
-            int rem1 = max % 10;
-            int rem2 = min % 10;
-            int temp = rem1;
-            // temp = dig2;
+        rem2 += borrow;
 
-            if(temp < rem2){
-                temp = max % power;
-                dig2 = temp / (power / 10);
-                temp = (temp % (power / 10)) + base;
-                dig2 --;
-            }
-            int val = temp - rem2;
-            result += (int)(val + Math.pow(10, count));
-            count++;
-            power *= 10;
-            max /= 10;
-            min /= 10;
-
+        if (rem2 > rem1) {
+            rem1 += base;
+            borrow = 1;
+        } else {
+            borrow = 0;
         }
 
-        return result;
+        int diff = rem1 - rem2;
+        result += diff * Math.pow(10, power);
+
+        power++;
+        n1 /= 10;
+        n2 /= 10;
     }
+
+    return result;
+}
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
