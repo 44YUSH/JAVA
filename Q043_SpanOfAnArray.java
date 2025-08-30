@@ -15,19 +15,20 @@ public class Q043_SpanOfAnArray {
             arr[i] = sc.nextInt();
         }
 
-        int max = 0, min = 0, span = 0;
-        for(int j = 0; j < arr.length; j++){
+        int max = arr[0];
+        int min = arr[0];
+        for(int j = 1; j < arr.length; j++){
+            // MAX
             if(max < arr[j]){
                 max = arr[j];
             }
-        }
-        min = max;
-        for(int j = 0; j < arr.length; j++){
+            
+            // MIN
             if(min > arr[j]){
                 min = arr[j];
             }
         }
-        span = max - min;
+        int span = max - min;
 
         System.out.println("Max  : "+max);
         System.out.println("Min  : "+min);
