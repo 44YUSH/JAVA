@@ -6,16 +6,16 @@ public class Q047_DiffOfTwoArrays {
         System.out.println("Enter length of 1st array : ");
         int n1 = sc.nextInt();
         int a1[] = new int[n1];
+        System.out.print("Enter your num : ");
         for(int i = 0; i < a1.length; i++){
-            System.out.print("num "+(i+1)+" : ");
             a1[i] = sc.nextInt();
         }
 
         System.out.println("Enter length of 2nd array : ");
         int n2 = sc.nextInt();
         int a2[] = new int[n2];
+        System.out.print("Enter your num : ");
         for(int j = 0; j < a2.length; j++){
-            System.out.print("num "+(j+1)+" : ");
             a2[j] = sc.nextInt();
         }
 
@@ -56,7 +56,7 @@ public class Q047_DiffOfTwoArrays {
             }
         }
         while(idx < diff.length){
-            System.out.println(diff[idx]);
+            System.out.print(diff[idx]+" ");
             idx++;
         }
     }
