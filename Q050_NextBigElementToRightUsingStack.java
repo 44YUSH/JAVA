@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Q051_NextBigElementToRightUsingStack {
+public class Q050_NextBigElementToRightUsingStack {
 
     public static void display(int[] a) {
         StringBuilder sb = new StringBuilder();
