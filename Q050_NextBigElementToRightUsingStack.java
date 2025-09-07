@@ -49,6 +49,6 @@ public class Q050_NextBigElementToRightUsingStack {
 
         int nextBigElem[] = solve(a);
         display(nextBigElem);
-  
+    
     }
 }
