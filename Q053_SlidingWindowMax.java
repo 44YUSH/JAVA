@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Q53_SlidingWindowMax {
+public class Q053_SlidingWindowMax {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
