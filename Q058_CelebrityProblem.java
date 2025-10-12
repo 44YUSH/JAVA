@@ -60,11 +60,11 @@ public class Q058_CelebrityProblem {
         for(int i = 0; i < arr.length; i++){
             if(i != pot){
                 if(arr[i][pot] == 0 || arr[pot][i] == 1){
-                    System.out.println("none");
+                    System.out.println("NO Celebrity");
                     return;
                 }
             }
         }
-        System.out.println(pot);
+        System.out.println(pot+" is the Celebrity !");
     }
 }
