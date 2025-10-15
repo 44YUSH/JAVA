@@ -8,13 +8,13 @@ public class Q059_MergeOverlappingInterval {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[][] arr = new int[n][2];   // ✅ only two columns (start, end)
+        int[][] arr = new int[n][2];   // only two columns (start, end)
 
         for (int j = 0; j < n; j++) {
             String line = br.readLine();
             String[] parts = line.split(" ");
             arr[j][0] = Integer.parseInt(parts[0]);
-            arr[j][1] = Integer.parseInt(parts[1]);  // ✅ corrected index
+            arr[j][1] = Integer.parseInt(parts[1]);  // corrected index
         }
 
         mergeOverlappingInterval(arr);
@@ -64,9 +64,9 @@ public class Q059_MergeOverlappingInterval {
 
         public int compareTo(Pair other) {
             if (this.st != other.st) {
-                return this.st - other.st;  // ✅ sort by start
+                return this.st - other.st;  // sort by start
             } else {
-                return this.et - other.et;  // ✅ if start same, sort by end
+                return this.et - other.et;  // if start same, sort by end
             }
         }
     }
