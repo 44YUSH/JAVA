@@ -1,6 +1,11 @@
 public class Q061_LinkedList {
 
     Node head;
+    private int size;
+
+    Q061_LinkedList(){
+        this.size = 0;
+    }
 
     class Node{
         String data;
@@ -9,6 +14,7 @@ public class Q061_LinkedList {
         Node(String data){
             this.data = data;
             this.next = null;
+            size++;
         }
     }
 
@@ -55,6 +61,44 @@ public class Q061_LinkedList {
         System.out.println("NULL");
     }
 
+    // delete first
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("The list is empty");
+            return;
+        }
+        size--;
+        head = head.next;
+    } 
+
+    //delete last
+    public void deleteLast(){
+        if(head == null){
+            System.out.println("The list is empty");
+            return;
+        }
+
+        size--;
+
+        if(head.next == null){
+            head = null;
+            return;
+        }
+
+        Node secondLast = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secondLast = secondLast.next;
+        }
+
+        secondLast.next = null;
+    }
+
+
+    public int getSize(){
+        return size;
+    }
 
     public static void main(String[] args) {
         Q061_LinkedList list = new Q061_LinkedList();
@@ -67,5 +111,17 @@ public class Q061_LinkedList {
 
         list.addFirst("This");
         list.printList();
+
+        list.deleteFirst();
+        list.printList();
+
+        list.deleteLast();
+        list.printList();
+
+        System.out.println(list.getSize());
+
+        list.addFirst("This");
+        list.printList();
+        System.out.println(list.getSize());
     }
 }
